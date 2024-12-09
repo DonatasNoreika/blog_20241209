@@ -14,4 +14,9 @@
     </div>
 </article>
 <hr>
+<h4>Comments ({{ post.comments_count }}):</h4>
+{% for comment in post.comments.all %}
+<small class="text-muted">{{ comment.author }}, {{ comment.created | date:"Y-m-d, f" }}</small>
+<p>{{ comment.content }}</p>
+{% endfor %}
 {% endblock %}

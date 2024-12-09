@@ -11,6 +11,7 @@
                 <small class="text-muted">{{ post.created }}</small>
                 <h2><a class="class-article" href="{% url 'post' post.pk %}">{{ post.title }}</a></h2>
                 <p class="class-content">{{ post.content }}</p>
+                <a>Comments: {{ post.comments_count }}</a>
             </div>
     </div>
 </article>
